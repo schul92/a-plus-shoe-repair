@@ -75,11 +75,30 @@
 
     <!-- HERO -->
     <section class="hero" aria-labelledby="heroHeading">
-      <figure class="hero__figure">
-        <img src="/assets/images/hero-luxury.jpg"
-             alt="A black stiletto pump on a dark walnut cobbler's bench, its glossy red lacquered sole catching warm tungsten light."
-             width="2560" height="1429" decoding="async" fetchpriority="high" />
-      </figure>
+      <div class="hero__slides" id="heroSlides" aria-live="off">
+        <figure class="hero-slide is-active" data-caption="Plate I &nbsp;·&nbsp; Red-sole restoration in progress">
+          <img src="/assets/images/hero-slide-1.jpg"
+               alt="A black stiletto on a dark walnut bench, glossy red lacquered sole catching warm tungsten light."
+               width="2560" height="1429" decoding="async" fetchpriority="high" />
+        </figure>
+        <figure class="hero-slide" data-caption="Plate II &nbsp;·&nbsp; Factory-matched lacquer, by hand">
+          <img src="/assets/images/hero-slide-2.jpg"
+               alt="Extreme macro of a polished red lacquered sole on a black heel, deep specular highlights."
+               width="2560" height="1429" loading="lazy" decoding="async" />
+        </figure>
+        <figure class="hero-slide" data-caption="Plate III &nbsp;·&nbsp; Decades on the bench">
+          <img src="/assets/images/hero-slide-3.jpg"
+               alt="A craftsman's hands polishing a red sole with a cream cloth on a dark walnut workbench."
+               width="2560" height="1429" loading="lazy" decoding="async" />
+        </figure>
+        <figure class="hero-slide" data-caption="Plate IV &nbsp;·&nbsp; Alterations, new in Virginia">
+          <img src="/assets/images/hero-slide-4.jpg"
+               alt="A tailor's workbench with brass scissors, crimson thread, and charcoal wool fabric."
+               width="2560" height="1429" loading="lazy" decoding="async" />
+        </figure>
+      </div>
+
+      <div class="hero__scrim" aria-hidden="true"></div>
 
       <div class="hero__plate">
         <p class="overline">Est. Cherry Hill, N.J. &nbsp;&nbsp;·&nbsp;&nbsp; Now at Springfield Mall, Va.</p>
@@ -94,6 +113,16 @@
         <div class="cta-row">
           <a class="btn btn--primary" href="tel:+15715550100">Call the shop</a>
           <a class="linklike" href="#visit">Or come see us <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+
+      <div class="hero__chrome">
+        <p class="hero__caption" id="heroCaption" aria-live="polite"></p>
+        <div class="hero__dots" role="tablist" aria-label="Hero slide">
+          <button class="hero-dot is-active" type="button" role="tab" aria-label="Slide 1" data-slide="0"></button>
+          <button class="hero-dot" type="button" role="tab" aria-label="Slide 2" data-slide="1"></button>
+          <button class="hero-dot" type="button" role="tab" aria-label="Slide 3" data-slide="2"></button>
+          <button class="hero-dot" type="button" role="tab" aria-label="Slide 4" data-slide="3"></button>
         </div>
       </div>
     </section>
@@ -173,24 +202,70 @@
 
     <hr class="rule" />
 
-    <!-- GALLERY -->
+    <!-- GALLERY — before / after -->
     <section class="gallery" id="gallery" aria-labelledby="galleryHeading">
       <header class="section-head section-head--center">
         <p class="overline">Chapter III &nbsp;·&nbsp; The Work</p>
-        <h2 id="galleryHeading"><em>Recent</em> restorations.</h2>
+        <h2 id="galleryHeading"><em>Before</em> &nbsp;&amp;&nbsp; <em>after</em>.</h2>
+        <p class="section-lede">Drag, tap, or hover to reveal the restoration.</p>
       </header>
-      <div class="gallery-strip">
+
+      <div class="ba-grid">
+        <figure class="ba" data-ba>
+          <div class="ba__frame">
+            <img class="ba__after" src="/assets/images/ba-1-after.jpg" alt="Restored black stiletto with pristine glossy red Louboutin sole on a dark walnut bench." loading="lazy" width="1200" height="1500" />
+            <div class="ba__before-wrap" aria-hidden="true">
+              <img class="ba__before" src="/assets/images/ba-1-before.jpg" alt="Worn black stiletto with scuffed red sole before restoration." loading="lazy" width="1200" height="1500" />
+            </div>
+            <input type="range" class="ba__range" min="0" max="100" value="50" aria-label="Reveal before and after for Louboutin sole restoration" />
+            <span class="ba__handle" aria-hidden="true"><span class="ba__handle-line"></span><span class="ba__handle-knob"></span></span>
+            <span class="ba__tag ba__tag--before">Before</span>
+            <span class="ba__tag ba__tag--after">After</span>
+          </div>
+          <figcaption><span>Plate V</span> Christian Louboutin — red-sole restoration.</figcaption>
+        </figure>
+
+        <figure class="ba" data-ba>
+          <div class="ba__frame">
+            <img class="ba__after" src="/assets/images/ba-2-after.jpg" alt="A restored chestnut brown leather oxford with mirror polish and new sole." loading="lazy" width="1200" height="1500" />
+            <div class="ba__before-wrap" aria-hidden="true">
+              <img class="ba__before" src="/assets/images/ba-2-before.jpg" alt="A worn brown leather oxford with scuffed toe and faded finish before restoration." loading="lazy" width="1200" height="1500" />
+            </div>
+            <input type="range" class="ba__range" min="0" max="100" value="50" aria-label="Reveal before and after for leather oxford restoration" />
+            <span class="ba__handle" aria-hidden="true"><span class="ba__handle-line"></span><span class="ba__handle-knob"></span></span>
+            <span class="ba__tag ba__tag--before">Before</span>
+            <span class="ba__tag ba__tag--after">After</span>
+          </div>
+          <figcaption><span>Plate VI</span> Leather dress shoe — resole &amp; condition.</figcaption>
+        </figure>
+
+        <figure class="ba" data-ba>
+          <div class="ba__frame">
+            <img class="ba__after" src="/assets/images/ba-3-after.jpg" alt="A fully restored black leather boot with new zipper and mirror polish." loading="lazy" width="1200" height="1500" />
+            <div class="ba__before-wrap" aria-hidden="true">
+              <img class="ba__before" src="/assets/images/ba-3-before.jpg" alt="A worn black leather boot with cracked leather and broken zipper before restoration." loading="lazy" width="1200" height="1500" />
+            </div>
+            <input type="range" class="ba__range" min="0" max="100" value="50" aria-label="Reveal before and after for boot restoration" />
+            <span class="ba__handle" aria-hidden="true"><span class="ba__handle-line"></span><span class="ba__handle-knob"></span></span>
+            <span class="ba__tag ba__tag--before">Before</span>
+            <span class="ba__tag ba__tag--after">After</span>
+          </div>
+          <figcaption><span>Plate VII</span> Leather boot — zipper, sole, recondition.</figcaption>
+        </figure>
+      </div>
+
+      <div class="gallery-strip gallery-strip--authentic">
         <figure class="plate">
-          <img src="/assets/images/hero-louboutin-sole.jpg" alt="Louboutin red sole on a cobbler's last, mid-restoration." loading="lazy" width="900" height="1200" />
-          <figcaption><span>Plate II</span> Lacquer, resurface, seal.</figcaption>
+          <img src="/assets/images/hero-louboutin-sole.jpg" alt="An actual shop photo: Louboutin red sole on a cobbler's last, mid-restoration." loading="lazy" width="900" height="1200" />
+          <figcaption><span>From the shop</span> Louboutin mid-restoration.</figcaption>
         </figure>
         <figure class="plate">
-          <img src="/assets/images/gallery-pair.jpg" alt="A finished pair of black Christian Louboutin pumps with pristine red soles, resting on tissue." loading="lazy" width="900" height="1200" />
-          <figcaption><span>Plate III</span> Finished pair, ready for pickup.</figcaption>
+          <img src="/assets/images/gallery-pair.jpg" alt="A real finished pair of black Christian Louboutin pumps with pristine red soles." loading="lazy" width="900" height="1200" />
+          <figcaption><span>From the shop</span> Finished pair, ready for pickup.</figcaption>
         </figure>
         <figure class="plate">
-          <img src="/assets/images/storefront.jpg" alt="The A Plus storefront at the mall, with the Aplus sign above polished black tile." loading="lazy" width="900" height="1200" />
-          <figcaption><span>Plate IV</span> Our house at Springfield Mall.</figcaption>
+          <img src="/assets/images/storefront.jpg" alt="The A Plus storefront at Springfield Mall." loading="lazy" width="900" height="1200" />
+          <figcaption><span>From the shop</span> Our house at Springfield Mall.</figcaption>
         </figure>
       </div>
     </section>
