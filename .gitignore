@@ -1,0 +1,14 @@
+.DS_Store
+node_modules/
+.vercel/
+.playwright-mcp/
+*.log
+.env
+.env.local
+
+# local preview screenshots
+desktop-above-fold.png
+desktop-full.png
+mobile-hero.png
+mobile-full.png
+lux-*.png
