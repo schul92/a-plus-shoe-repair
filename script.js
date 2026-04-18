@@ -70,15 +70,69 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
 /* ---------- before / after sliders ---------- */
 document.querySelectorAll("[data-ba]").forEach((fig) => {
   const range = fig.querySelector(".ba__range");
-  const beforeWrap = fig.querySelector(".ba__before-wrap");
+  const before = fig.querySelector(".ba__before");
   const handle = fig.querySelector(".ba__handle");
-  if (!range || !beforeWrap || !handle) return;
+  if (!range || !before || !handle) return;
+
+  let touched = false;
 
   const apply = (val) => {
     const v = Math.max(0, Math.min(100, parseFloat(val)));
-    beforeWrap.style.width = v + "%";
+    const inset = 100 - v;
+    before.style.clipPath = `inset(0 ${inset}% 0 0)`;
+    before.style.webkitClipPath = `inset(0 ${inset}% 0 0)`;
     handle.style.left = v + "%";
+    range.value = v;
   };
+
   apply(range.value);
-  range.addEventListener("input", (e) => apply(e.target.value));
+
+  const markTouched = () => {
+    if (touched) return;
+    touched = true;
+    fig.classList.add("is-touched");
+  };
+
+  range.addEventListener("input", (e) => {
+    apply(e.target.value);
+    markTouched();
+  });
+  range.addEventListener("pointerdown", markTouched);
+
+  // Gentle auto-demo when scrolled into view: 12 → 88 → 50
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((en) => {
+        if (!en.isIntersecting || touched || fig.dataset.demoed) return;
+        fig.dataset.demoed = "1";
+        const seq = [
+          { v: 88, delay: 450, dur: 1100 },
+          { v: 22, delay: 0, dur: 1100 },
+          { v: 50, delay: 0, dur: 900 },
+        ];
+        let start = 12;
+        const runStep = (i) => {
+          if (i >= seq.length || touched) return;
+          const step = seq[i];
+          setTimeout(() => {
+            const from = start;
+            const to = step.v;
+            const t0 = performance.now();
+            const frame = (now) => {
+              if (touched) return;
+              const t = Math.min(1, (now - t0) / step.dur);
+              const ease = 0.5 - Math.cos(t * Math.PI) / 2;
+              apply(from + (to - from) * ease);
+              if (t < 1) requestAnimationFrame(frame);
+              else { start = to; runStep(i + 1); }
+            };
+            requestAnimationFrame(frame);
+          }, step.delay);
+        };
+        runStep(0);
+      });
+    },
+    { threshold: 0.4 }
+  );
+  io.observe(fig);
 });

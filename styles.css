@@ -614,17 +614,15 @@ main section {
   display: block;
   pointer-events: none;
 }
+.ba__before {
+  clip-path: inset(0 88% 0 0);
+  -webkit-clip-path: inset(0 88% 0 0);
+  transition: clip-path 40ms linear, -webkit-clip-path 40ms linear;
+}
 .ba__before-wrap {
   position: absolute;
   inset: 0;
-  width: 50%;
-  overflow: hidden;
   pointer-events: none;
-  transition: width 40ms linear;
-}
-.ba__before-wrap .ba__before {
-  width: calc(100% / 0.5);
-  max-width: none;
 }
 .ba__range {
   position: absolute;
@@ -646,7 +644,7 @@ main section {
 .ba__handle {
   position: absolute;
   top: 0; bottom: 0;
-  left: 50%;
+  left: 12%;
   width: 1px;
   transform: translateX(-50%);
   pointer-events: none;
@@ -658,22 +656,30 @@ main section {
   top: 0; bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 1px;
-  background: rgba(247, 243, 236, 0.9);
-  box-shadow: 0 0 18px rgba(0,0,0,0.4);
+  width: 2px;
+  background: linear-gradient(180deg, rgba(247,243,236,0) 0%, rgba(247,243,236,0.95) 12%, rgba(247,243,236,0.95) 88%, rgba(247,243,236,0) 100%);
+  box-shadow: 0 0 22px rgba(0,0,0,0.5);
 }
 .ba__handle-knob {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 44px;
-  height: 44px;
-  border: 1px solid rgba(247, 243, 236, 0.9);
-  background: rgba(26, 22, 19, 0.25);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  width: 58px;
+  height: 58px;
+  border: 1.5px solid var(--gold);
+  background: rgba(26, 22, 19, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   border-radius: 50%;
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.45),
+    inset 0 0 0 1px rgba(247, 243, 236, 0.12);
+  animation: baPulse 2200ms ease-in-out infinite;
+}
+@keyframes baPulse {
+  0%, 100% { box-shadow: 0 8px 30px rgba(0,0,0,0.45), 0 0 0 0 rgba(179, 138, 62, 0.55), inset 0 0 0 1px rgba(247, 243, 236, 0.12); }
+  50%      { box-shadow: 0 8px 30px rgba(0,0,0,0.45), 0 0 0 10px rgba(179, 138, 62, 0), inset 0 0 0 1px rgba(247, 243, 236, 0.12); }
 }
 .ba__handle-knob::before,
 .ba__handle-knob::after {
@@ -682,18 +688,41 @@ main section {
   top: 50%;
   width: 0;
   height: 0;
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
   transform: translateY(-50%);
 }
 .ba__handle-knob::before {
-  left: 12px;
-  border-right: 6px solid rgba(247,243,236,0.95);
+  left: 14px;
+  border-right: 9px solid var(--gold);
 }
 .ba__handle-knob::after {
-  right: 12px;
-  border-left: 6px solid rgba(247,243,236,0.95);
+  right: 14px;
+  border-left: 9px solid var(--gold);
 }
+
+/* hint while idle */
+.ba__hint {
+  position: absolute;
+  left: 50%;
+  bottom: 1rem;
+  transform: translateX(-50%);
+  z-index: 2;
+  padding: 0.35rem 0.85rem;
+  background: rgba(26, 22, 19, 0.65);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: var(--ivory);
+  font-family: var(--sans);
+  font-size: 0.6rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  pointer-events: none;
+  opacity: 1;
+  transition: opacity 400ms ease;
+}
+.ba.is-touched .ba__hint { opacity: 0; }
+.ba.is-touched .ba__handle-knob { animation: none; }
 
 .ba__tag {
   position: absolute;
@@ -734,13 +763,39 @@ main section {
   margin-right: 0.6rem;
 }
 
-.gallery-strip--authentic {
-  margin-top: 2rem;
-  padding-top: 3.5rem;
-  border-top: 1px solid var(--line-soft);
+/* ---------- storefront banner ---------- */
+
+.storefront-banner {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: var(--ink);
 }
-.gallery-strip--authentic .plate figcaption span {
-  color: var(--ink-soft);
+.storefront-banner img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 21 / 9;
+  object-fit: cover;
+  display: block;
+  filter: saturate(1.05) contrast(1.02);
+}
+.storefront-banner figcaption {
+  position: absolute;
+  left: var(--pad);
+  bottom: 1.25rem;
+  color: rgba(247, 243, 236, 0.92);
+  font-family: var(--sans);
+  font-size: 0.62rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 10px rgba(0,0,0,0.55);
+}
+.storefront-banner::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.55) 100%);
+  pointer-events: none;
 }
 
 /* ---------- visit ---------- */
