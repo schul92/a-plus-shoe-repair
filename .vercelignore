@@ -1,0 +1,25 @@
+.env
+.env.local
+.git
+.claude
+.playwright-mcp
+.gemini-*.mjs
+node_modules
+*.log
+.DS_Store
+
+# local preview screenshots
+*.png
+!assets/**/*.png
+desktop-*.png
+mobile-*.png
+lux-*.png
+v2-*.png
+v3-*.png
+hero-gen.png
+slideshow-hero.png
+gallery-ba.png
+
+# backup originals not used by site
+assets/images/storefront-original.jpg
+assets/images/raw-*.jpeg

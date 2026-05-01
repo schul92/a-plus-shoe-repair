@@ -4,12 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>A Plus Shoe Repair &amp; Alterations — Springfield Mall, VA</title>
-  <meta name="description" content="Shoe repair and alterations at Springfield Mall, VA. Christian Louboutin red-sole restoration, leather repair, tailoring (hems, tuxedos, wedding dresses), handbags, luggage, and keys cut — done by hand since Cherry Hill." />
+  <meta name="description" content="Shoe repair at Springfield Mall, VA. Women's high-heel specialists — top-lifts, heel tips, stiletto reheeling, Christian Louboutin red-sole restoration. Plus full resoling, leather repair, and alterations. Forty years on the bench." />
   <meta name="theme-color" content="#722F37" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="A Plus Shoe Repair &amp; Alterations — Springfield Mall, VA" />
-  <meta property="og:description" content="Shoe repair, alterations, and Louboutin red-sole restoration at Springfield Mall, VA. Leather, tailoring, tuxedos, luggage, handbags, keys cut." />
+  <meta property="og:description" content="Women's high-heel repair specialists at Springfield Mall, VA. Top-lifts, heel tips, stiletto reheeling, Christian Louboutin red-sole restoration. Forty years on the bench." />
   <meta property="og:image" content="/assets/images/hero-luxury.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 
@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="image" href="/assets/images/hero-luxury.jpg" fetchpriority="high" />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/styles.css" />
 
   <script type="application/ld+json">
@@ -27,7 +27,7 @@
     "name": "A Plus Shoe Repair & Alterations",
     "image": "https://aplusshoerepair.com/assets/images/hero-luxury.jpg",
     "url": "https://aplusshoerepair.com",
-    "telephone": "+1-571-555-0100",
+    "telephone": "+1-703-217-1162",
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
@@ -42,12 +42,27 @@
       { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "10:00", "closes": "21:00" },
       { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "11:00", "closes": "18:00" }
     ],
-    "areaServed": ["Springfield, VA","Alexandria, VA","Arlington, VA","Fairfax County, VA","Washington, DC"]
+    "areaServed": ["Springfield, VA","Alexandria, VA","Arlington, VA","Fairfax County, VA","Washington, DC"],
+    "knowsAbout": ["Women's high-heel repair","Top-lift replacement","Heel tip replacement","Stiletto reheeling","Christian Louboutin red-sole restoration","Shoe resoling","Leather repair","Shoe stretching","Handbag repair","Alterations"],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Shoe Repair Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Women's High-Heel Top-Lift & Heel Tip Replacement", "description": "Worn-down top-lifts, stiletto tips, and heel covers replaced — most pairs in fifteen minutes." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Christian Louboutin Red-Sole Restoration", "description": "Factory-matched red lacquer, hand-buffed and sealed." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Resoling & Reheeling", "description": "Full and half soles in rubber or leather; heel rebuilds for pumps and dress shoes." } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Leather Repair, Recoloring & Stretching" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Handbag, Luggage & Jacket Repair" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Alterations, Keys Cut & Hand Shine" } }
+      ]
+    }
   }
   </script>
 </head>
 <body>
-  <!-- TODO before launch: phone (571) 555-0100, hours Mon–Sat 10–9 · Sun 11–6, suite 13006 -->
+  <!-- TODO before launch: confirm hours Mon–Sat 10–9 · Sun 11–6, suite 13006 -->
+
+  <div class="grain" aria-hidden="true"></div>
 
   <header class="site-header" id="siteHeader">
     <a class="monogram" href="#top" aria-label="A Plus Shoe Repair and Alterations — home">
@@ -63,11 +78,12 @@
       <a href="#services">Services</a>
       <a href="#craft">The House</a>
       <a href="#gallery">Work</a>
+      <a href="#workshop">Workshop</a>
       <a href="#visit">Visit</a>
     </nav>
-    <a class="header-call" href="tel:+15715550100">
+    <a class="header-call" href="tel:+17032171162">
       <span class="header-call__label">Telephone</span>
-      <span class="header-call__num">(571) 555&#8209;0100</span>
+      <span class="header-call__num">(703) 217&#8209;1162</span>
     </a>
   </header>
 
@@ -76,42 +92,45 @@
     <!-- HERO -->
     <section class="hero" aria-labelledby="heroHeading">
       <div class="hero__slides" id="heroSlides" aria-live="off">
-        <figure class="hero-slide is-active" data-caption="Plate I &nbsp;·&nbsp; Red-sole restoration in progress">
-          <img src="/assets/images/hero-slide-1.jpg"
-               alt="A black stiletto on a dark walnut bench, glossy red lacquered sole catching warm tungsten light."
-               width="2560" height="1429" decoding="async" fetchpriority="high" />
-        </figure>
-        <figure class="hero-slide" data-caption="Plate II &nbsp;·&nbsp; Factory-matched lacquer, by hand">
-          <img src="/assets/images/hero-slide-2.jpg"
-               alt="Extreme macro of a polished red lacquered sole on a black heel, deep specular highlights."
-               width="2560" height="1429" loading="lazy" decoding="async" />
-        </figure>
-        <figure class="hero-slide" data-caption="Plate III &nbsp;·&nbsp; Decades on the bench">
+        <figure class="hero-slide is-active" data-caption="Plate I &nbsp;·&nbsp; Decades on the bench">
           <img src="/assets/images/hero-slide-3.jpg"
                alt="A craftsman's hands polishing a red sole with a cream cloth on a dark walnut workbench."
-               width="2560" height="1429" loading="lazy" decoding="async" />
+               width="2560" height="1429" decoding="async" fetchpriority="high" />
         </figure>
-        <figure class="hero-slide" data-caption="Plate IV &nbsp;·&nbsp; Alterations, new in Virginia">
+        <figure class="hero-slide" data-caption="Plate II &nbsp;·&nbsp; Alterations, new in Virginia">
           <img src="/assets/images/hero-slide-4.jpg"
                alt="A tailor's workbench with brass scissors, crimson thread, and charcoal wool fabric."
                width="2560" height="1429" loading="lazy" decoding="async" />
         </figure>
+        <figure class="hero-slide" data-caption="Plate III &nbsp;·&nbsp; The bench, moved to Springfield">
+          <img src="/assets/images/shop-real-bench.jpg"
+               alt="The actual workshop bench at A Plus — yellow Landis machines lined up across the back wall, garment bags on the front table."
+               width="1600" height="2133" loading="lazy" decoding="async" />
+        </figure>
       </div>
+
+      <button class="hero-next" id="heroNext" type="button" aria-label="Next slide">
+        <span class="hero-next__arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M13 6l6 6-6 6" />
+          </svg>
+        </span>
+      </button>
 
       <div class="hero__scrim" aria-hidden="true"></div>
 
       <div class="hero__plate">
-        <p class="overline">Est. Cherry Hill, N.J. &nbsp;&nbsp;·&nbsp;&nbsp; Now at Springfield Mall, Va.</p>
+        <p class="overline">Forty Years on the Bench &nbsp;·&nbsp; Est.&nbsp;1986</p>
         <h1 id="heroHeading">
           <em>Shoe repair</em><br />
           &amp; alterations,<br />
           by hand.
         </h1>
         <p class="hero__deck">
-          Christian Louboutin red-sole restoration, leather repair and recoloring, tailoring for tuxedos and dresses, handbags, luggage, and keys cut — now at Springfield Mall, Virginia.
+          <strong>Forty years</strong> of women's high-heel repair &mdash; top-lifts, heel tips, stiletto reheeling, and Christian&nbsp;Louboutin red-sole restoration. Plus full resoling, leather, and alterations. Now at Springfield&nbsp;Mall, Virginia.
         </p>
         <div class="cta-row">
-          <a class="btn btn--primary" href="tel:+15715550100">Call the shop</a>
+          <a class="btn btn--primary" href="tel:+17032171162">Call the shop</a>
           <a class="linklike" href="#visit">Or come see us <span aria-hidden="true">&rarr;</span></a>
         </div>
       </div>
@@ -122,7 +141,6 @@
           <button class="hero-dot is-active" type="button" role="tab" aria-label="Slide 1" data-slide="0"></button>
           <button class="hero-dot" type="button" role="tab" aria-label="Slide 2" data-slide="1"></button>
           <button class="hero-dot" type="button" role="tab" aria-label="Slide 3" data-slide="2"></button>
-          <button class="hero-dot" type="button" role="tab" aria-label="Slide 4" data-slide="3"></button>
         </div>
       </div>
     </section>
@@ -131,87 +149,135 @@
 
     <!-- SERVICES -->
     <section class="services" id="services" aria-labelledby="servicesHeading">
-      <header class="section-head">
+      <header class="section-head" data-reveal>
+        <span class="chapter-numeral" aria-hidden="true">I</span>
         <p class="overline">Chapter I &nbsp;·&nbsp; The Services</p>
         <h2 id="servicesHeading"><em>What we do,</em> done by hand.</h2>
-        <p class="section-lede">Every pair passes through a single bench. We treat a twelve-hundred-dollar pump the way we treat a forty-dollar loafer — carefully, and only with what it needs.</p>
+        <p class="section-lede">Forty years at the same bench. <strong>Shoe repair is the craft</strong> &mdash; women's high heels are the daily bread. We treat a twelve-hundred-dollar pump the way we treat a forty-dollar loafer: carefully, and only with what it needs.</p>
       </header>
 
       <ol class="service-list">
-        <li class="service service--feature">
+        <li class="service service--feature" data-reveal>
           <span class="service__num">I</span>
           <div class="service__body">
-            <h3>Christian Louboutin <em>Red-Sole Restoration</em></h3>
-            <p>Factory-matched lacquer, buffed by hand, sealed to last. Your reds leave looking new.</p>
+            <h3>Women's High Heels <em>— Top-Lifts &amp; Heel Tips</em></h3>
+            <p>The most-asked job at our bench. Worn-down top-lifts replaced, stiletto tips re-tipped, scuffed heel covers re-wrapped. <strong>Most pairs in fifteen minutes</strong> while you shop the mall — pumps, stilettos, kitten heels, block heels, boots.</p>
             <span class="service__tag">Specialty</span>
           </div>
         </li>
-        <li class="service">
+        <li class="service" data-reveal>
           <span class="service__num">II</span>
           <div class="service__body">
-            <h3>Resoling &amp; Heel Replacement</h3>
-            <p>Full soles, half soles, rubber or leather. Heel tips while you shop — most in under fifteen minutes.</p>
+            <h3>Christian Louboutin <em>Red-Sole Restoration</em></h3>
+            <p>Factory-matched lacquer on the iconic red sole, buffed by hand and sealed to last. Pumps, slingbacks, booties — your reds leave looking new.</p>
           </div>
         </li>
-        <li class="service">
+        <li class="service" data-reveal>
           <span class="service__num">III</span>
           <div class="service__body">
-            <h3>Leather Repair &amp; Recoloring</h3>
-            <p>Scuffs, scratches, faded uppers. We return color and suppleness to leather that still has miles left.</p>
+            <h3>Resoling &amp; Reheeling</h3>
+            <p>Full soles and half soles in rubber or leather. Heel rebuilds for women's pumps and men's dress shoes. Boot heels, lifts, taps — done in-house.</p>
           </div>
         </li>
-        <li class="service">
+        <li class="service" data-reveal>
           <span class="service__num">IV</span>
           <div class="service__body">
-            <h3>Alterations &amp; Tailoring <small>— New in Virginia</small></h3>
-            <p>Pants and skirt hems, waist and sleeve adjustments, zipper replacement. Tuxedos, wedding and occasion dresses, everyday clothing — all welcome.</p>
+            <h3>Leather Repair, Recoloring &amp; Stretching</h3>
+            <p>Scuffs, scratches, faded uppers. Custom stretching for width or length, orthopedic adjustments. We return color and suppleness to leather that still has miles left.</p>
           </div>
         </li>
-        <li class="service">
+        <li class="service" data-reveal>
           <span class="service__num">V</span>
           <div class="service__body">
             <h3>Handbags, Luggage &amp; Jackets</h3>
             <p>Handle and strap replacement, lining and zipper repair, leather-jacket restoration. If we can't fix it, we'll tell you honestly.</p>
           </div>
         </li>
-        <li class="service">
+        <li class="service" data-reveal>
           <span class="service__num">VI</span>
           <div class="service__body">
-            <h3>Keys, Shine &amp; Stretching</h3>
-            <p>Keys cut while you wait, hand shoe shines, custom stretching for width or length, orthopedic adjustments, laces, cleaning.</p>
+            <h3>Alterations, Keys &amp; Shine <small>— New in Virginia</small></h3>
+            <p>Hems, waist and sleeve adjustments, zipper replacement, tuxedos and occasion dresses. Keys cut while you wait, hand shines, laces, cleaning.</p>
           </div>
         </li>
       </ol>
     </section>
 
+    <!-- LEGACY RIBBON — forty years -->
+    <aside class="legacy-ribbon" aria-label="Forty years of practice">
+      <p class="overline">Same Hands &nbsp;·&nbsp; Since&nbsp;1986</p>
+      <div class="legacy-ribbon__numeral" aria-hidden="true">
+        <span class="legacy-ribbon__digits">40</span>
+        <span class="legacy-ribbon__word">years</span>
+      </div>
+      <p class="legacy-ribbon__line">
+        Forty years on the bench &mdash; <em>Cherry Hill</em> to <em>Springfield&nbsp;Mall</em>, suite 13006. Same craft, same standards, new zip&nbsp;code.
+      </p>
+    </aside>
+
     <hr class="rule" />
 
     <!-- CRAFT -->
     <section class="craft" id="craft" aria-labelledby="craftHeading">
-      <p class="overline">Chapter II &nbsp;·&nbsp; The House</p>
-      <h2 id="craftHeading" class="craft__head">
-        <em>From Cherry Hill</em><br />
-        <span>to Springfield,</span><br />
-        one shoe at a time.
-      </h2>
-      <div class="craft__body">
-        <p>For years our shop lived at Cherry Hill Mall in New Jersey, where we became known for something specific: treating luxury footwear with the care it deserves, at prices that made sense. Designer houses repair shoes once; we have done it a thousand times.</p>
-        <p>We are bringing the same bench, the same tools, and the same standards to <strong>Springfield Mall in Northern Virginia</strong>. Drop something off on your way past Nordstrom&nbsp;Rack. Pick it up looking new.</p>
+      <div class="craft__head-wrap" data-reveal>
+        <span class="chapter-numeral" aria-hidden="true">II</span>
+        <p class="overline">Chapter II &nbsp;·&nbsp; The House &mdash; Since 1986</p>
+        <h2 id="craftHeading" class="craft__head">
+          <em>Forty years</em><br />
+          <span>at the bench,</span><br />
+          one shoe at a time.
+        </h2>
+      </div>
+      <div class="craft__body" data-reveal>
+        <p>For <strong>forty years</strong> &mdash; first at Cherry Hill Mall in New Jersey, now at Springfield Mall in Virginia &mdash; we have done one thing: <strong>repair shoes by hand</strong>. Mostly women's heels &mdash; top-lifts, tips, full reheeling on pumps and stilettos and the Louboutins that come in for their reds. Plus resoling, leather, alterations. Designer houses repair shoes once; we have done it tens of thousands of times.</p>
+      </div>
+      <blockquote class="pullquote" data-reveal>
+        <p>&ldquo;Forty years on the bench.<br /><em>Same hands,</em> new&nbsp;address.&rdquo;</p>
+        <footer>— The House, est. 1986</footer>
+      </blockquote>
+      <div class="craft__body" data-reveal>
+        <p>The bench is the same. The Landis stitchers and Sutton finishers we&nbsp;have used for four decades came with us. Drop something off on your way past Nordstrom&nbsp;Rack. Pick it up looking new.</p>
       </div>
     </section>
+
+    <!-- CINEMATIC BANNER — the bench -->
+    <aside class="bench-banner" aria-label="The bench at A Plus">
+      <img src="/assets/images/shop-real-press.jpg"
+           alt="The vintage POWER finishing press at A Plus, lit by a warm tungsten lamp from the side."
+           width="1600" height="2133" loading="lazy" decoding="async" />
+      <div class="bench-banner__plate">
+        <p class="overline">The Bench &nbsp;·&nbsp; Forty Years In Use</p>
+        <p class="bench-banner__quote">
+          <em>Same Landis stitchers.</em><br />
+          Same Sutton finishers.<br />
+          Forty years on.
+        </p>
+      </div>
+    </aside>
 
     <hr class="rule" />
 
     <!-- GALLERY — before / after -->
     <section class="gallery" id="gallery" aria-labelledby="galleryHeading">
-      <header class="section-head section-head--center">
+      <header class="section-head section-head--center" data-reveal>
+        <span class="chapter-numeral chapter-numeral--center" aria-hidden="true">III</span>
         <p class="overline">Chapter III &nbsp;·&nbsp; The Work</p>
         <h2 id="galleryHeading"><em>Before</em> &nbsp;&amp;&nbsp; <em>after</em>.</h2>
         <p class="section-lede">Drag the gold handle to reveal the restoration.</p>
       </header>
 
+      <figure class="heritage-plate" data-reveal>
+        <img src="/assets/images/storefront.jpg"
+             alt="The Aplus storefront at Cherry Hill Mall — black tile facade with the Aplus sign, CLOTHING ALTERATIONS sign visible inside, and SHOE / KEY signs on the counter."
+             width="1024" height="1371" loading="lazy" decoding="async" />
+        <figcaption>
+          <span>Heritage</span>
+          <p>The Cherry Hill storefront — same sign, same counter, same SHOE &middot; KEY board. The shop opens in <em>Springfield&nbsp;Mall, Suite&nbsp;13006</em> with the same name above the door.</p>
+        </figcaption>
+      </figure>
+
       <div class="ba-grid">
-        <figure class="ba" data-ba>
+        <figure class="ba" data-ba data-reveal>
           <div class="ba__frame">
             <img class="ba__after" src="/assets/images/ba-1-after.jpg" alt="Restored black stiletto with pristine glossy red Louboutin sole on a dark walnut bench." loading="lazy" width="1200" height="1500" />
             <img class="ba__before" src="/assets/images/ba-1-before.jpg" alt="Worn black stiletto with scuffed red sole before restoration." loading="lazy" width="1200" height="1500" />
@@ -224,7 +290,7 @@
           <figcaption><span>Plate V</span> Christian Louboutin — red-sole restoration.</figcaption>
         </figure>
 
-        <figure class="ba" data-ba>
+        <figure class="ba" data-ba data-reveal>
           <div class="ba__frame">
             <img class="ba__after" src="/assets/images/ba-2-after.jpg" alt="A restored chestnut brown leather oxford with mirror polish and new sole." loading="lazy" width="1200" height="1500" />
             <img class="ba__before" src="/assets/images/ba-2-before.jpg" alt="A worn brown leather oxford with scuffed toe and faded finish before restoration." loading="lazy" width="1200" height="1500" />
@@ -237,7 +303,7 @@
           <figcaption><span>Plate VI</span> Leather dress shoe — resole &amp; condition.</figcaption>
         </figure>
 
-        <figure class="ba" data-ba>
+        <figure class="ba" data-ba data-reveal>
           <div class="ba__frame">
             <img class="ba__after" src="/assets/images/ba-3-after.jpg" alt="A fully restored black leather boot with new zipper and mirror polish." loading="lazy" width="1200" height="1500" />
             <img class="ba__before" src="/assets/images/ba-3-before.jpg" alt="A worn black leather boot with cracked leather and broken zipper before restoration." loading="lazy" width="1200" height="1500" />
@@ -255,10 +321,53 @@
 
     <hr class="rule" />
 
+    <!-- WORKSHOP / TOOLS -->
+    <section class="workshop" id="workshop" aria-labelledby="workshopHeading">
+      <header class="section-head section-head--center" data-reveal>
+        <span class="chapter-numeral chapter-numeral--center" aria-hidden="true">IV</span>
+        <p class="overline">Chapter IV &nbsp;·&nbsp; The Workshop</p>
+        <h2 id="workshopHeading"><em>Forty years</em> at this&nbsp;bench.</h2>
+        <p class="section-lede">The same Landis stitchers and Sutton finishers we have used since 1986 &mdash; moved to Springfield with us, set up for alterations, polishing, and&nbsp;repair.</p>
+      </header>
+
+      <div class="workshop-grid">
+        <figure class="workshop-plate workshop-plate--wide" data-reveal>
+          <img src="/assets/images/shop-real-bench.jpg"
+               alt="The actual bench at A Plus — yellow Landis stitchers and finishers lined up across the back wall, garment bags on the front table."
+               width="1600" height="2133" loading="lazy" decoding="async" />
+          <figcaption><span>Plate VIII</span> The bench &mdash; lined up, ready for the day.</figcaption>
+        </figure>
+
+        <figure class="workshop-plate" data-reveal>
+          <img src="/assets/images/shop-real-press.jpg"
+               alt="A vintage POWER finishing press with HEEL WHEEL fixture, lit by a warm tungsten lamp from the side."
+               width="1600" height="2133" loading="lazy" decoding="async" />
+          <figcaption><span>Plate IX</span> The press &mdash; same one we have always used.</figcaption>
+        </figure>
+
+        <figure class="workshop-plate" data-reveal>
+          <img src="/assets/images/shop-real-wide.jpg"
+               alt="A pair of brown leather monk-strap shoes mounted on the yellow stretching machine under warm sconce light."
+               width="1600" height="2133" loading="lazy" decoding="async" />
+          <figcaption><span>Plate X</span> Stretching brown monk straps to fit, by hand.</figcaption>
+        </figure>
+
+        <figure class="workshop-plate" data-reveal>
+          <img src="/assets/images/shop-alteration.jpg"
+               alt="A wooden 'CLOTHING ALTERATION' sign above sewing machines lit by a warm tungsten lamp."
+               width="1200" height="1500" loading="lazy" decoding="async" />
+          <figcaption><span>Plate XI</span> Alterations &mdash; new in Virginia.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <hr class="rule" />
+
     <!-- VISIT -->
     <section class="visit" id="visit" aria-labelledby="visitHeading">
-      <div class="visit__copy">
-        <p class="overline">Chapter IV &nbsp;·&nbsp; Visit</p>
+      <div class="visit__copy" data-reveal>
+        <span class="chapter-numeral" aria-hidden="true">V</span>
+        <p class="overline">Chapter V &nbsp;·&nbsp; Visit</p>
         <h2 id="visitHeading"><em>Springfield Mall,</em><br /> Suite&nbsp;13006.</h2>
         <address>
           6660 Springfield Mall, Suite 13006<br />
@@ -269,11 +378,11 @@
           <div><dt>Sunday</dt><dd>11 &mdash; 6</dd></div>
         </dl>
         <div class="cta-row">
-          <a class="btn btn--primary" href="tel:+15715550100">(571) 555&#8209;0100</a>
+          <a class="btn btn--primary" href="tel:+17032171162">(703) 217&#8209;1162</a>
           <a class="linklike" href="https://maps.apple.com/?q=Springfield+Mall+6660+Springfield+Mall+Springfield+VA+22150" target="_blank" rel="noopener">Open in Maps <span aria-hidden="true">&rarr;</span></a>
         </div>
       </div>
-      <div class="visit__map" aria-hidden="true">
+      <div class="visit__map" data-reveal aria-hidden="true">
         <iframe
           title="Map of Springfield Mall, Springfield VA"
           src="https://www.google.com/maps?q=6660+Springfield+Mall,+Springfield,+VA+22150&output=embed"
@@ -296,14 +405,14 @@
         </span>
       </div>
       <p>6660 Springfield Mall, Suite 13006 &nbsp;·&nbsp; Springfield, Virginia 22150</p>
-      <p><a href="tel:+15715550100">(571) 555&#8209;0100</a> &nbsp;·&nbsp; Mon&ndash;Sat 10&ndash;9 &nbsp;·&nbsp; Sun 11&ndash;6</p>
-      <p class="fineprint">&copy; <span id="year">2026</span> A Plus Shoe Repair &amp; Alterations. Previously of Cherry Hill Mall, N.J.</p>
+      <p><a href="tel:+17032171162">(703) 217&#8209;1162</a> &nbsp;·&nbsp; Mon&ndash;Sat 10&ndash;9 &nbsp;·&nbsp; Sun 11&ndash;6</p>
+      <p class="fineprint">&copy; <span id="year">2026</span> A Plus Shoe Repair &amp; Alterations &nbsp;·&nbsp; Est. 1986, Cherry Hill, N.J. &nbsp;·&nbsp; Forty years on the bench.</p>
     </div>
   </footer>
 
-  <a class="sticky-call" href="tel:+15715550100" aria-label="Call A Plus Shoe Repair">
+  <a class="sticky-call" href="tel:+17032171162" aria-label="Call A Plus Shoe Repair">
     <span>Call the shop</span>
-    <span class="sticky-call__num">(571) 555&#8209;0100</span>
+    <span class="sticky-call__num">(703) 217&#8209;1162</span>
   </a>
 
   <script src="/script.js" defer></script>

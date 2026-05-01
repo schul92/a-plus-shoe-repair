@@ -13,10 +13,33 @@ mobile-hero.png
 mobile-full.png
 lux-*.png
 v2-*.png
+v3-*.png
+v4-*.png
+v4-*.jpg
+v5-*.png
+v6-*.png
+v6-*.jpg
+v7-*.png
+v7-*.jpg
+mobile-check-*.png
+type-*.png
 hero-gen.png
+slideshow-hero.png
+gallery-ba.png
 assets/images/hero-gen.png
 assets/images/hero-slide-*.png
 assets/images/ba-*.png
-slideshow-hero.png
-gallery-ba.png
-v3-*.png
+
+# raw / unused source assets
+assets/images/raw-*.jpg
+assets/images/raw-*.jpeg
+assets/images/storefront-original.jpg
+assets/images/shop-*.png
+assets/images/shop-boots.jpg
+assets/images/shop-machines.jpg
+assets/images/shop-oxfords.jpg
+
+# local AI generation scripts (use env vars for API keys)
+.gemini-*.mjs
+
+.vercel

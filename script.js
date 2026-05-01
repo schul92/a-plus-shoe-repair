@@ -1,3 +1,9 @@
+if (location.search.includes("pdf=1")) {
+  document.documentElement.classList.add("pdf-mode");
+  document.body && document.body.classList.add("pdf-mode");
+  document.addEventListener("DOMContentLoaded", () => document.body.classList.add("pdf-mode"));
+}
+
 const header = document.getElementById("siteHeader");
 const onScroll = () => {
   if (!header) return;
@@ -8,6 +14,30 @@ onScroll();
 
 const yearEl = document.getElementById("year");
 if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+/* ---------- scroll reveal ---------- */
+(() => {
+  const els = document.querySelectorAll("[data-reveal]");
+  if (!els.length) return;
+  const reduceMotion =
+    window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduceMotion) {
+    els.forEach((el) => el.classList.add("is-visible"));
+    return;
+  }
+  const io = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach((en, i) => {
+        if (!en.isIntersecting) return;
+        const delay = Math.min(i * 80, 320);
+        setTimeout(() => en.target.classList.add("is-visible"), delay);
+        obs.unobserve(en.target);
+      });
+    },
+    { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+  );
+  els.forEach((el) => io.observe(el));
+})();
 
 /* ---------- hero slideshow ---------- */
 (() => {
@@ -56,6 +86,14 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
       start();
     })
   );
+
+  const nextBtn = document.getElementById("heroNext");
+  if (nextBtn) {
+    nextBtn.addEventListener("click", () => {
+      go(idx + 1);
+      start();
+    });
+  }
 
   root.parentElement.addEventListener("mouseenter", stop);
   root.parentElement.addEventListener("mouseleave", start);
