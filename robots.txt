@@ -26,4 +26,4 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://aplusshoerepair.com/sitemap.xml
+Sitemap: https://aplusshoerepairva.com/sitemap.xml

@@ -29,7 +29,7 @@
 ### Top 5 Critical Issues
 
 1. **🚨 Site returns HTTP 401 + `x-robots-tag: noindex`** — Vercel SSO/deployment protection is enabled. Google, Bing, ChatGPT, Perplexity, Claude — *none* of them can read the site.
-2. **🚨 No custom domain** — Site lives at `aplus-XXX.vercel.app`. Schema markup references `aplusshoerepair.com`, which doesn't resolve. NAP consistency for Google Business Profile is broken.
+2. **🚨 No custom domain** — Site lives at `aplus-XXX.vercel.app`. Schema markup references `aplusshoerepairva.com`, which doesn't resolve. NAP consistency for Google Business Profile is broken.
 3. **🚨 No `robots.txt`** — file doesn't exist (returns 401).
 4. **🚨 No `sitemap.xml`** — file doesn't exist.
 5. **🚨 No canonical URL tag** — the single most important on-page SEO tag is missing from `<head>`.
@@ -37,7 +37,7 @@
 ### Top 5 Quick Wins
 
 1. **Disable Vercel deployment protection** (Project Settings → Deployment Protection → Off). 60 seconds.
-2. **Buy + connect `aplusshoerepair.com`** at Vercel Domains. ~5 min, $12/yr.
+2. **Buy + connect `aplusshoerepairva.com`** at Vercel Domains. ~5 min, $12/yr.
 3. **Add `<link rel="canonical">`** to `<head>`. 30 seconds.
 4. **Create `robots.txt` and `sitemap.xml`**. 5 min.
 5. **Compress hero images to WebP** — 7.5 MB → ~2 MB total. 15 min, big LCP win.
@@ -201,7 +201,7 @@ Remove before relying on this site for business decisions. Hours and suite numbe
 - ✅ `priceRange`
 
 **Issues to fix:**
-- ❌ `url` and `image` reference `https://aplusshoerepair.com` — domain doesn't exist
+- ❌ `url` and `image` reference `https://aplusshoerepairva.com` — domain doesn't exist
 - ⚠️ Missing: `aggregateRating` and `review` (will be addable once Google reviews come in)
 - ⚠️ Missing: `sameAs` (social media + Google Business Profile URL once verified)
 - ⚠️ Missing: `paymentAccepted`, `currenciesAccepted`
@@ -209,7 +209,7 @@ Remove before relying on this site for business decisions. Hours and suite numbe
 ### Schema validation note
 
 Cannot validate live with Google Rich Results Test because the page returns 401. After fixing auth, run:
-- https://search.google.com/test/rich-results?url=https://aplusshoerepair.com
+- https://search.google.com/test/rich-results?url=https://aplusshoerepairva.com
 - https://validator.schema.org/
 
 ---

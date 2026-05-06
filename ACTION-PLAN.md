@@ -25,10 +25,10 @@
 
 ### 2. Connect a real custom domain
 
-**Problem:** Site is at `aplus-n0hhybnnm-steve-songs-projects.vercel.app`. Schema references `aplusshoerepair.com` which doesn't exist. Google Business Profile needs a real domain to score the listing.
+**Problem:** Site is at `aplus-n0hhybnnm-steve-songs-projects.vercel.app`. Schema references `aplusshoerepairva.com` which doesn't exist. Google Business Profile needs a real domain to score the listing.
 
 **Fix:**
-1. Buy `aplusshoerepair.com` (or `aplusshoes.com` / `aplusva.com`) — recommend Vercel Domains for one-click setup, ~$12/yr
+1. Buy `aplusshoerepairva.com` (or `aplusshoes.com` / `aplusva.com`) — recommend Vercel Domains for one-click setup, ~$12/yr
 2. Vercel dashboard → `aplus` project → Settings → Domains → Add → enter domain
 3. If bought through Vercel: auto-configures DNS in 60 seconds
 4. If bought elsewhere: copy the A/CNAME records Vercel provides into your registrar
@@ -45,7 +45,7 @@
 
 **Fix:** Add to `index.html` head section after line 8:
 ```html
-<link rel="canonical" href="https://aplusshoerepair.com/" />
+<link rel="canonical" href="https://aplusshoerepairva.com/" />
 ```
 
 **Time:** 30 seconds
@@ -75,7 +75,7 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://aplusshoerepair.com/sitemap.xml
+Sitemap: https://aplusshoerepairva.com/sitemap.xml
 ```
 
 **Time:** 1 minute
@@ -92,7 +92,7 @@ Sitemap: https://aplusshoerepair.com/sitemap.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://aplusshoerepair.com/</loc>
+    <loc>https://aplusshoerepairva.com/</loc>
     <lastmod>2026-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
@@ -126,10 +126,10 @@ Sitemap: https://aplusshoerepair.com/sitemap.xml
 
 **Fix:**
 ```html
-<meta property="og:image" content="https://aplusshoerepair.com/assets/images/hero-luxury.jpg" />
+<meta property="og:image" content="https://aplusshoerepairva.com/assets/images/hero-luxury.jpg" />
 <meta property="og:image:width" content="2560" />
 <meta property="og:image:height" content="1429" />
-<meta property="og:url" content="https://aplusshoerepair.com/" />
+<meta property="og:url" content="https://aplusshoerepairva.com/" />
 ```
 
 **Impact:** Link previews actually render in iMessage, WhatsApp, LinkedIn, Slack
